@@ -190,6 +190,16 @@ async function sendNotification(app) {
     });
 }
 
-app.listen(PORT, '0.0.0.0', () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`Curiosity AI Club running on port ${PORT}`);
 });
+
+// Shut down cleanly when Railway replaces the container on redeploy,
+// so a normal deploy isn't reported as a crash.
+for (const signal of ['SIGTERM', 'SIGINT']) {
+    process.on(signal, () => {
+        console.log(`Received ${signal}, shutting down gracefully`);
+        server.close(() => process.exit(0));
+        setTimeout(() => process.exit(0), 5000).unref();
+    });
+}
