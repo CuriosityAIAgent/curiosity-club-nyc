@@ -224,6 +224,47 @@
             letter-spacing: 0.1em;
             font-weight: 500;
         }
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 1080px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .sponsor-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .sponsor-photo {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 1.6rem;
+            box-shadow: 0 4px 20px rgba(47,91,62,0.12);
+        }
+        .sponsor-quote {
+            font-size: 1.02rem;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.7;
+            margin-bottom: 1.4rem;
+        }
+        .sponsor-name {
+            font-family: var(--mono);
+            font-size: 0.76rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            margin-top: auto;
+        }
+        @media (max-width: 780px) {
+            .sponsors-grid { grid-template-columns: 1fr; gap: 3rem; max-width: 480px; }
+        }
 
         .hero-meta {
             display: flex;
@@ -864,7 +905,7 @@
                 <span class="pulse"></span>
                 <span>FOUNDING COHORT</span>
                 <span class="sep">&middot;</span>
-                <span>LONDON</span>
+                <span>NEW YORK CITY</span>
                 <span class="sep">&middot;</span>
                 <span>2026</span>
             </div>
@@ -879,22 +920,34 @@
         </div>
 
         <aside class="hero-meta">
-            <div class="meta-block"><div class="label">Seats</div><div class="value big">010</div></div>
-            <div class="meta-block"><div class="label">Chapter</div><div class="value small">London</div></div>
+            <div class="meta-block"><div class="label">Seats</div><div class="value big">~15</div></div>
+            <div class="meta-block"><div class="label">Chapter</div><div class="value small">New York City</div></div>
             <div class="meta-block"><div class="label">Next</div><div class="value small">More cities<br>to follow</div></div>
             <div class="meta-block"><div class="label">Status</div><div class="value small" style="color: var(--accent);"><span class="status-dot"></span>Accepting interest</div></div>
         </aside>
 
     </section>
 
-    <!-- ADAM — FOUNDER & SPONSOR -->
+    <!-- NYC SPONSORS -->
     <section class="founder-section">
-        <div class="founder-tag fade-up">FOUNDER &amp; SPONSOR</div>
-        <img src="Adam.jpeg" alt="Adam" class="founder-photo-lg fade-up">
-        <p class="founder-quote-lg fade-up">
-            &ldquo;If you have found yourself on a weekend, hours into a session, losing track of time, being inspired by the future ahead of us &mdash; this is for you.&rdquo;
-        </p>
-        <p class="founder-name fade-up">&mdash; ADAM</p>
+        <div class="founder-tag fade-up">OUR SPONSORS</div>
+        <div class="sponsors-grid">
+            <div class="sponsor-card fade-up">
+                <img src="Martin.png" alt="Martin Marron" class="sponsor-photo">
+                <p class="sponsor-quote">&ldquo;The team we&rsquo;re looking for isn&rsquo;t defined by titles. It&rsquo;s defined by people who see potential for improvements and immediately ask: &lsquo;How can we use AI to solve this?&rsquo;&rdquo;</p>
+                <p class="sponsor-name">&mdash; MARTIN MARRON</p>
+            </div>
+            <div class="sponsor-card fade-up">
+                <img src="Karen.png" alt="Karen Donnelly" class="sponsor-photo">
+                <p class="sponsor-quote">&ldquo;The goal isn&rsquo;t perfection. It&rsquo;s curiosity, experimentation, and learning together as AI becomes part of how we work and live.&rdquo;</p>
+                <p class="sponsor-name">&mdash; KAREN DONNELLY</p>
+            </div>
+            <div class="sponsor-card fade-up">
+                <img src="Mo.png" alt="Mo Khalifa" class="sponsor-photo">
+                <p class="sponsor-quote">&ldquo;If you believe the best opportunities begin with a simple &lsquo;What if?&rsquo;, this club is for you. Because in a world where answers are free, curiosity becomes your greatest competitive advantage.&rdquo;</p>
+                <p class="sponsor-name">&mdash; MO KHALIFA</p>
+            </div>
+        </div>
     </section>
 
     <!-- THE CYCLE -->
@@ -946,7 +999,7 @@
                 <p>There are plenty of conferences. No shortage of webinars. LinkedIn is full of people who &ldquo;leverage AI.&rdquo;</p>
                 <p class="emph">This isn&rsquo;t <span class="accent">that</span>.</p>
                 <p class="strong-text">This is a room. A small one. People who have gone <strong>well beyond asking questions</strong> and started building answers. People who have shipped something &mdash; a prototype, a tool, an agent, a product &mdash; and want to be around others doing the same.</p>
-                <p>We connect <strong>outside of work hours</strong> because this matters enough to give up an evening for it. Monthly sessions to share what we&rsquo;re building. A group chat that&rsquo;s always on for the problems that can&rsquo;t wait. Quarterly deep-dives with someone from outside who&rsquo;s pushing the edge.</p>
+                <p>Monthly sessions to share what we&rsquo;re building. A group chat that&rsquo;s always on for the problems that can&rsquo;t wait. Quarterly deep-dives with someone from outside who&rsquo;s pushing the edge.</p>
                 <p class="strong-text"><strong>No panels. No presentations. No name badges.</strong> Just a small group, a table, and the thing they built last weekend.</p>
             </div>
         </div>
@@ -1032,7 +1085,7 @@
                     <div class="format-num">// 02</div>
                     <div class="format-big">01<span class="unit">/mo</span></div>
                     <div class="format-label">Monthly sessions</div>
-                    <p>Evenings, outside work hours. Show what you&rsquo;ve built, hear what others are working on.</p>
+                    <p>Show what you&rsquo;ve built, hear what others are working on.</p>
                 </div>
                 <div class="format-card">
                     <div class="format-num">// 03</div>
@@ -1044,7 +1097,7 @@
                     <div class="format-num">// 04</div>
                     <div class="format-big">01<span class="unit">/city</span></div>
                     <div class="format-label">Global chapters</div>
-                    <p>Starting in London. Other locations to follow.</p>
+                    <p>Starting in New York City. Other locations to follow.</p>
                 </div>
             </div>
         </div>
@@ -1055,7 +1108,7 @@
         <div class="inner">
             <div class="apply-head fade-up">
                 <div>
-                    <div class="apply-counter">010<span class="under"></span></div>
+                    <div class="apply-counter">~15<span class="under"></span></div>
                     <div class="apply-counter-sub">// FOUNDING SEATS REMAINING</div>
                 </div>
                 <div class="apply-copy">
@@ -1079,12 +1132,11 @@
             </div>
             <div class="footer-col">
                 <h5>// CHAPTERS</h5>
-                <p><span class="live">&bull;</span> London &nbsp;&nbsp;<span class="mute">// live</span></p>
+                <p><span class="live">&bull;</span> New York City &nbsp;&nbsp;<span class="mute">// live</span></p>
                 <p><span class="mute">&bull;</span> Other locations &nbsp;&nbsp;<span class="mute">// soon</span></p>
             </div>
             <div class="footer-col">
                 <h5>// FOUNDERS</h5>
-                <p>Adam</p>
                 <p>Haresh</p>
                 <p>Craig</p>
             </div>
